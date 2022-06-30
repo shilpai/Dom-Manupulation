@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manupulation</title>
+</head>
+<body id="body">
+    <ul id="element" data="valid">
+        <li class="list-item">First Element</li>
+        <li class="list-item">Second Element</li>
+        <li class="list-item">Third Element</li>
+    </ul>
+<!-- 
+    <div id="firstDiv">First Div</div>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </table> -->
+    <button id="clickBtn" onclick="alert('Namaste Bharat')">Click Me</button>
+    <script>
+        // Root Node
+    //    console.log(document.documentElement)
+    //    console.log(document.head)
+       
+    //    console.log(document.body)
+       //Childrens
+    //   console.log(document.body.childNodes)
+    //   console.log(document.body.children)
+
+    //   for (node of document.body.children){
+    //     console.log(document.body.children)
+    //   }
+    //   console.log(document.body.firstChild)
+    //   console.log(document.body.lastChild)
+    //   console.log(document.body.firstElementChild)
+    //   console.log(document.body.lastElementChild)
+
+    // in array form
+    // const childrensOfBody = Array.from(document.body.children)
+    // console.log(childrensOfBody)
+
+    // Siblings
+    // const ulTag = document.body.children [0]
+    // const firstLi = ulTag.children[0]
+    // const SecondLi = ulTag.children[1]
+    // console.log(SecondLi.previousElementSibling)
+
+    //Table Dom Manupulation
+    // const tableTag = document.body.children[1]
+    // console.log(tableTag.tBodies[0].rows[0].cells[1].textContent);
+    //  console.log(tableTag.tBodies[0].rows[0].cells[1].style = "background-color:pink;");
+    // console.log(tableTag.rows)
+
+    // ID Search
+    // element.style.background = "red"
+
+    // const ulTag = document.getElementById("element")
+    // ulTag.style.backgroundColor = "pink"
+
+    // listItem = document.getElementsByClassName("list-item")
+    // console.log(listItem)
+    // console.log(document.getElementsByTagName("table"))
+
+    // const listItems = document.querySelector('.list-item')
+    //when we have multiple elements in output
+    // const listItems = document.querySelectorAll('.list-item')
+    //when we have id in o/p
+    // const listItems = document.querySelectorAll('#element')
+    // const listItems = document.querySelectorAll('ul > li:nth-child(2)')
+    //  const listItems = document.querySelectorAll('ul > li:last-child')
+    // console.log(listItems[0].textContent)
+
+    //Attributes
+    // console.log(element.data)
+    // console.log(element.getAttribute('data'))
+    // console.log(element.setAttribute('order-placed', 'pending'))
+    // console.log(element.hasAttribute('order-placed'))
+    // console.log(element.removeAttribute('order-placed'))
+    // console.log(element.hasAttribute('order-placed'))
+    // console.log(element.attributes)
+
+    // Creating and Removing the node elements
+    //    const newDiv = document.createElement('div')
+   //    newDiv.innerHTML = `<ul id="element" data="valid">
+  //         <li class="list-item">First Element</li>
+ //         <li class="list-item">Second Element</li>
+//         <li class="list-item">Third Element</li>
+//     </ul>`
+
+// const newText = document.createTextNode('Namaste Bharat')
+// newDiv.appendChild(newText)
+// body.append(newDiv)         //all below
+// body.prepend(newDiv)       // all above
+// body.before(newDiv)
+// body.after(newDiv)
+// firstDiv.replaceWith(newDiv)
+// firstDiv.remove()
+
+// Events
+function callMe(event){
+    console.log(event.type)
+    console.log(event.currentTarget)
+    console.log(event.clientY)
+    console.log(event.clientX)
+    alert("Thanks for Listening")
+}
+// clickBtn.onclick = callMe
+
+clickBtn.addEventListener('click', callMe)
+// clickBtn.addEventListener('click', function(){
+//     alert("Thanks")
+// })
+// clickBtn.removeEventListner('click',callMe)
+    </script>
+</body>
+</html>
